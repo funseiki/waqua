@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/funseiki/waqua/issues"
   },
-  "homepage": "https://github.com/funseiki/waqua"
+  "homepage": "https://github.com/funseiki/waqua",
+  "dependencies": {
+    "express": "~4.0.0"
+  }
 }
