@@ -1,0 +1,19 @@
+{
+  "name": "waqua",
+  "version": "0.0.0",
+  "description": "App to track water data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/funseiki/waqua.git"
+  },
+  "author": "",
+  "license": "Private",
+  "bugs": {
+    "url": "https://github.com/funseiki/waqua/issues"
+  },
+  "homepage": "https://github.com/funseiki/waqua"
+}
