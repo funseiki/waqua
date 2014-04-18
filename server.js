@@ -4,7 +4,7 @@ var express = require('express'),
 var app = express();
 
 app.get('/', function(req, res) {
-    res.send('Waquafied');
+    res.send('Waquafied Now');
 });
 
 var server = app.listen(config.site.port, function() {
