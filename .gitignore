@@ -5,3 +5,6 @@
 # /config
 /config/development.js
 /config/production.js
+
+# /ui
+/ui/dependencies
