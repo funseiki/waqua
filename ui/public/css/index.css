@@ -7,4 +7,11 @@ body {
   padding-top: 70px;
   height:100%
 }
+
+.navbar-center {
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
+}
 }
