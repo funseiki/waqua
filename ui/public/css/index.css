@@ -14,4 +14,7 @@ body {
     table-layout: fixed;
     float:none;
 }
+
+.fill {
+    min-height: 50%;
 }
