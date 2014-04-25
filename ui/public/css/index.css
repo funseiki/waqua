@@ -1,4 +1,10 @@
+html {
+    height: 100%;
+}
+
 body {
-  min-height: 2000px;
+  min-height: 400px;
   padding-top: 70px;
+  height:100%
+}
 }
