@@ -5,9 +5,9 @@
         <style>
 
             .counties {
-              fill: none;
-              stroke: #000;
-              stroke-linejoin: round;
+                fill: none;
+                stroke: #000;
+                stroke-linejoin: round;
             }
 
             .states {
@@ -16,7 +16,7 @@
               stroke-linejoin: round;
             }
 
-            .q0-9 { fill:rgb(247,251,255); }
+            .q0-9 { fill:rgb(200,200,255); }
             .q1-9 { fill:rgb(222,235,247); }
             .q2-9 { fill:rgb(198,219,239); }
             .q3-9 { fill:rgb(158,202,225); }
@@ -32,29 +32,67 @@
     <body>
 
         <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/queue.v1.min.js"></script>
         <script src="http://d3js.org/topojson.v1.min.js"></script>
 
         <script>
 
             var width = 960,
-                height = 660;
+                height = 600;
 
+            // map id's to numbers
+            var rateById = d3.map();
+
+            // round values to a set value in the range
+            var quantize = d3.scale.quantize()
+                .domain([0, .15])
+                .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+
+            // Loads the albers projection to project map
             var projection = d3.geo.albers()
-                .scale(3000)                
+                // Bigger > zooms in
+                .scale(1200)
                 .translate([width / 2, height / 2]);
 
+            // Creates a path data string sutable for "d" in svg's
             var path = d3.geo.path()
                 .projection(projection);
 
+            // Make a new svg
             var svg = d3.select("body").append("svg")
                 .attr("width", width)
                 .attr("height", height);
 
-            d3.json("illinois.json", function(error, illinois) {
-                svg.append("path")
-                    .datum(topojson.feature(illinois, illinois.objects.layer1))
+            // initialize a queue of files to load before using files
+            queue()
+                // load the .json and .tsv
+                .defer(d3.json, "illinois.json")
+                .defer(d3.tsv, "counties.tsv", function(d) { rateById.set(d.id, +d.rate); })
+                // After they are loaded, call ready() and give each .json
+                .await(ready);
+
+            // function that lays out the map
+            function ready(error, us) {
+                // g Groups svgs
+                svg.append("g")
+                    // the group class is counties
+                    .attr("class", "counties")
+                // all of the path uses the us.json counties data
+                .selectAll("path")
+                    .data(topojson.feature(us, us.objects.illinois2).features)
+                // sets each path data to each color class
+                .enter().append("path")
+                    .attr("class", function(d) { return quantize(rateById.get(d.id)); })
                     .attr("d", path);
-            });
+
+
+                /*svg.append("path")
+                    .datum(topojson.mesh(us, us.objects.illinois2, function(a, b) { return a !== b; }))
+                    .attr("class", "states")
+                    .attr("d", path);*/
+            }
+
+            d3.select(self.frameElement).style("height", height + "px");
 
         </script>
 
