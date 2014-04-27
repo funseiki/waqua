@@ -18,13 +18,13 @@ html
   body
     .navbar.navbar-fixed-top
         .container
-            ul.nav.navbar-nav.navbar-center.navbar-default
-                li
-                    a(href='/about') About
-                li
-                    a(href='/search') Search
-                li
-                    a(href='/contaminants') Contaminants
-                li
-                    a(href='/action') Take Action
+            .row.center-row
+                .col-xs-2.text-center
+                    a.navs(href='/about') About
+                .col-xs-2.text-center
+                    a.navs(href='/search') Search
+                .col-xs-2.text-center
+                    a.navs(href='/contaminants') Contaminants
+                .col-xs-2.text-center
+                    a.navs(href='/action') Action
     block content
