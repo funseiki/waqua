@@ -16,17 +16,15 @@ html
             script(src='/js/libs/html5shiv.js')
 
   body
-    .navbar.navbar-default.navbar-fixed-top
+    .navbar.navbar-fixed-top
         .container
-            .navbar-header
-                a.navbar-brand.logo(href='/')='Waqua'
-            ul.nav.navbar-nav.navbar-right
-                li
-                    a(href='/about') About
-                li
-                    a(href='/search') Search
-                li
-                    a(href='/contaminants') Contaminants
-                li
-                    a(href='/action') Take Action
+            .row.center-row
+                .col-xs-2.text-center
+                    a.navs(href='/about') About
+                .col-xs-2.text-center
+                    a.navs(href='/search') Search
+                .col-xs-2.text-center
+                    a.navs(href='/contaminants') Contaminants
+                .col-xs-2.text-center
+                    a.navs(href='/action') Action
     block content
