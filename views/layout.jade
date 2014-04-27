@@ -19,9 +19,9 @@ html
     .navbar.navbar-fixed-top
         .container
             .row
-                .col-xs-6.text-center.navs
-                    a.nav-item(href='/about') ?
-                    a.nav-item(href='/search') S
-                    a.nav-item(href='/contaminants') C
-                    a.nav-item(href='/action') Act
+                a.col-xs-offset-1.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/about') About
+                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/action') Action
+                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/') Home
+                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/search') Search
+                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/contaminants') Contaminants
     block content
