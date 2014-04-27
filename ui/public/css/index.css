@@ -18,3 +18,14 @@ body {
 .fill {
     min-height: 50%;
 }
+
+.nav-item {
+    background-color: beige;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navs {
+    float:none;
+    margin: 0 auto;
+}

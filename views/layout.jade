@@ -18,13 +18,10 @@ html
   body
     .navbar.navbar-fixed-top
         .container
-            .row.center-row
-                .col-xs-2.text-center
-                    a.navs(href='/about') About
-                .col-xs-2.text-center
-                    a.navs(href='/search') Search
-                .col-xs-2.text-center
-                    a.navs(href='/contaminants') Contaminants
-                .col-xs-2.text-center
-                    a.navs(href='/action') Action
+            .row
+                .col-xs-6.text-center.navs
+                    a.nav-item(href='/about') ?
+                    a.nav-item(href='/search') S
+                    a.nav-item(href='/contaminants') C
+                    a.nav-item(href='/action') Act
     block content
