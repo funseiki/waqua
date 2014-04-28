@@ -37,6 +37,10 @@
     color: #E60000;
 }
 
+.image-header {
+    font-size: 20px;
+}
+
 .emphasis-large {
     color: red;
     font-size: 28px;
@@ -60,6 +64,14 @@ img.tall {
 
 .spacer {
     height: 30px;
+}
+
+.image-spacer {
+    height: 50px;
+}
+
+.image-spacer2 {
+    height: 100px;
 }
 
 /*******************/
