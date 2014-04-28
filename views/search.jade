@@ -1,8 +1,12 @@
 extends layout
 block content
+    .container
+        .row
+            .col-xs-12.text-center
+                svg
 
 block scripts
-    script(type="text/javascript", src="http://d3js.org/d3.v3.min.js")
-    script(type="text/javascript", src="http://d3js.org/queue.v1.min.js")
-    script(type="text/javascript", src="http://d3js.org/topojson.v1.min.js")
+    script(type="text/javascript", src="/js/lib/d3.v3.min.js")
+    script(type="text/javascript", src="/js/lib/queue.v1.min.js")
+    script(type="text/javascript", src="/js/lib/topojson.v1.min.js")
     script(type="text/javascript", src="/js/map_viz.js" )
