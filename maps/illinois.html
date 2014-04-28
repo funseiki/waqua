@@ -10,16 +10,19 @@
                 stroke-linejoin: round;
             }
 
-            .states {
+            .county:hover {
+                fill:#f66;
+
+            }
+
+            /*.states {
               fill: none;
               stroke: #000;
               stroke-linejoin: round;
-            }
+            }*/
 
             .q0-9 { fill:rgb(100,255,105); }
-            .q0-9:hover {
-                fill:#f66;
-            }
+            
             .q1-9 { fill:rgb(122,135,147); }
             .q2-9 { fill:rgb(198,219,239); }
             .q3-9 { fill:rgb(158,202,225); }
@@ -40,8 +43,8 @@
 
         <script>
 
-            var width = 960,
-                height = 600;
+            var width = 600,
+                height = 400;
 
             // map id's to numbers
             var rateById = d3.map();
@@ -52,10 +55,11 @@
                 .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
 
             // Loads the albers projection to project map
-            var projection = d3.geo.albers()
+            var projection = d3.geo.albersUsa()
                 // Bigger > zooms in
-                .scale(1200)
-                .translate([width / 2, height / 2]);
+                //.center([-90.9119886116482,40.19316792190344])
+                .scale(3520)
+                .translate([0, height / 1.5]);
 
             // Creates a path data string sutable for "d" in svg's
             var path = d3.geo.path()
@@ -65,6 +69,13 @@
             var svg = d3.select("body").append("svg")
                 .attr("width", width)
                 .attr("height", height);
+
+            var county_click = function( thing) {
+                console.log(thing);
+                console.log(thing.id);
+                console.log(d3.select("#countyID-"+thing.id));
+                //event.
+            }
 
             // initialize a queue of files to load before using files
             queue()
@@ -85,20 +96,24 @@
                     .data(topojson.feature(us, us.objects.illinois2).features)
                 // sets each path data to each color class
                 .enter().append("path")
-                    .attr("class", function(d) { return quantize(rateById.get(d.id)); })
+
+                    .attr("class", function(d) { 
+                        console.log("poop");
+                        return quantize(rateById.get(d.id)) + " county"; })
+                    .attr("id", function(d) { return "countyId-"+ d.id})
+                    .on("click", county_click)
                     .attr("d", path);
-
-
-
-                /*svg.append("path")
-                    .datum(topojson.mesh(us, us.objects.illinois2, function(a, b) { return a !== b; }))
-                    .attr("class", "states")
-                    .attr("d", path);*/
             }
+            
+            // Click on county brings up stuff
+
+
 
             d3.select(self.frameElement).style("height", height + "px");
 
         </script>
+
+        
 
     </body>
 </html>
