@@ -1,103 +1,103 @@
-id	rate	name
-47	0.0272	Adams
-101	0.0336	Alexander
-73	0.0416	Bond
-5	0.1376	Boone
-50	0.1104	Brown
-19	0.0848	Bureau
-66	0.1392	Calhoun
-8	0.0048	Carroll
-49	0.1088	Cass
-42	0.0192	Champaign
-57	0.1072	Christian
-65	0.1088	Clark
-75	0.1328	Clay
-79	0.096	Clinton
-60	0.1152	Coles
-9	0.01	Cook
-71	0.0416	Crawford
-67	0.0528	Cumberland
-44	0.1136	De Witt
-10	0.0832	Dekalb
-54	0.0064	Douglas
-12	0.1584	Dupage
-53	0.1584	Edgar
-82	0.1248	Edwards
-70	0.0912	Effingham
-69	0.112	Faytte
-32	0.144	Ford
-91	0.0528	Franklin
-37	0.0288	Fulton
-93	0.152	Gallatin
-64	0.0672	Greene
-21	0.0864	Grundy
-88	0.0736	Hamilton
-38	0.0656	Hancock
-96	0.1488	Hardin
-29	0.1408	Henderson
-20	0.1184	Henry
-31	0.1488	Iroquois
-92	0.1008	Jackson
-72	0.0896	Jasper
-86	0.1536	Jefferson
-68	0.1216	Jersey
-1	0.08	Jo Daviess
-98	0.0832	Johnson
-11	0.0176	Kane
-24	0.0544	Kankakee
-17	0.128	Kendall
-26	0.0928	Knox
-18	0.1024	La Salle
-6	0.0752	Lake
-76	0.0624	Lawrence
-14	0.1296	Lee
-28	0.0736	Livingston
-43	0.0928	Logan
-51	0.0736	Macon
-63	0.0592	Macoupin
-74	0.1216	Madison
-78	0.04	Marion
-27	0.0784	Marshal
-41	0.1376	Mason
-100	0.072	Massac
-39	0.0736	McDonough
-4	0.088	McHenry
-35	0.008	McLean
-48	0.1536	Menard
-22	0.0368	Mercer
-84	0.1584	Monroe
-62	0.1216	Montgomery
-55	0.1376	Morgan
-58	0.0112	Moultrie
-7	0.1008	Ogle
-33	0.0288	Peoria
-90	0.0128	Perry
-46	0.0096	Piatt
-56	0.1008	Pike
-97	0.056	Pope
-102	0.1312	Pulaski
-23	0.056	Putnam
-89	0.0608	Randolph
-77	0.072	Richland
-15	0.104	Rock Island
-94	0.152	Saline
-52	0.0096	Sangamon
-45	0.0832	Schuyler
-59	0.0288	Scott
-61	0.0544	Shelby
-80	0.152	St. Clair
-25	0.1424	Stark
-2	0.1056	Stephenson
-36	0.0464	Tazewell
-99	0.0736	Union
-40	0.024	Vermilion
-83	0.04	Wabash
-30	0.1392	Warren
-85	0.0336	Washington
-81	0.0896	Wayne
-87	0.128	White
-13	0.1024	Whiteside
-16	0.0464	Will
-95	0.1104	Williamson
-3	0.1136	Winnebago
-34	0.0448	Woodford
+id	name	date	contaminants
+47	Adams	7/1/2007	Chloramine
+101	Alexander	9/1/2011	Coliform (TCR)
+73	Bond	1/1/2008	TTHM
+5	Boone	1/1/2011	Nitrate
+50	Brown	6/1/2005	Coliform (TCR)
+19	Bureau	10/1/2004	Coliform (TCR)
+66	Calhoun	4/1/2008	Chlorine
+8	Carroll	4/1/2005	Combined Radium (-226 & -228)
+49	Cass	9/1/2003	Coliform (TCR)
+42	Champaign	1/1/2008	Chlorine
+57	Christian	7/1/2009	Chlorine
+65	Clark	1/1/2010	Chlorine & Coliform (TCR)
+75	Clay	11/1/2005	Coliform (TCR)
+79	Clinton	7/1/2008	Chlorine
+60	Coles	11/1/2012	Coliform (TCR)
+9	Cook	1/1/2012	Combined Radium (-226 & -228) & Coliform (TCR) & TTHM
+71	Crawford	7/1/2009	Coliform (TCR)
+67	Cumberland	10/1/2007	Chlorine & Coliform (TCR)
+44	De Witt	9/1/2011	Coliform (TCR)
+10	Dekalb	9/1/2013	Coliform (TCR)
+54	Douglas	7/1/2005	TTHM
+12	Dupage	1/1/2009	Combined Radium (-226 & -228)
+53	Edgar	8/1/2011	Coliform (TCR)
+82	Edwards	1/1/2010	Chlorine 
+70	Effingham	11/1/2006	Coliform (TCR)
+69	Faytte	6/1/2009	Coliform (TCR)
+32	Ford	7/1/2008	Chlorine
+91	Franklin	8/1/2003	Coliform (TCR)
+37	Fulton	4/1/2013	Coliform (TCR)
+93	Gallatin	11/1/2003	Coliform (TCR)
+64	Greene	9/1/2012	Coliform (TCR)
+21	Grundy	1/1/2008	Endrin
+88	Hamilton	11/1/2005	Coliform (TCR)
+38	Hancock	1/1/2011	Total Haloacetic Acids (HAA5) 
+96	Hardin	5/1/2010	Coliform (TCR)
+29	Henderson	7/1/2007	TTHM
+20	Henry	9/1/2010	Coliform (TCR)
+31	Iroquois	9/1/2010	Coliform (TCR)
+92	Jackson	1/1/2010	Chlorite 
+72	Jasper	10/1/2006	Chlorine 
+86	Jefferson	5/1/2008	Coliform (TCR)
+68	Jersey	5/1/2011	Coliform (TCR)
+1	Jo Daviess	10/1/2002	Methoxychlor & Toxaphene & Dalapon
+98	Johnson	12/1/2004	Chlorite
+11	Kane	11/1/2012	Coliform (TCR)
+24	Kankakee	2/1/2006	Coliform (TCR)
+17	Kendall	10/1/2006	Combined Radium (-226 & -228)
+26	Knox	8/1/2007	Coliform (TCR)
+18	La Salle	8/1/2013	Coliform (TCR)
+6	Lake	5/1/2007	Coliform (TCR)
+76	Lawrence	4/1/2005	Nitrate
+14	Lee	7/1/2009	Arsenic
+28	Livingston	2/1/2004	Coliform (TCR)
+43	Logan	1/1/2007	Chlorine 
+51	Macon	4/1/2002	Nitrate
+63	Macoupin	9/1/2002	Coliform (TCR)
+74	Madison	1/1/2007	Coliform (TCR)
+78	Marion	1/1/2005	Nitrite 
+27	Marshal	4/1/2005	Combined Radium (-226 & -228)
+41	Mason	7/1/2013	Chlorine 
+100	Massac	10/1/2002	1,2,4-Trichlorobenzene
+39	McDonough	10/1/2007	TTHM
+4	McHenry	8/1/2006	Coliform (TCR)
+35	McLean	1/1/2013	Chlorine
+48	Menard	8/1/2011	Coliform (TCR)
+22	Mercer	7/1/2006	Chlorine
+84	Monroe	10/1/2004	Total Haloacetic Acids (HAA5)
+62	Montgomery	1/1/2010	Total Haloacetic Acids (HAA5) 
+55	Morgan	5/1/2011	Coliform (TCR)
+58	Moultrie	10/1/2007	Coliform (TCR)
+7	Ogle	4/1/2007	Combined Radium (-226 & -228)
+33	Peoria	10/1/2005	Coliform (TCR)
+90	Perry	1/1/2012	Combined Radium (-226 & -228)
+46	Piatt	7/1/2007	Chlorine 
+56	Pike	8/1/2012	Coliform (TCR)
+97	Pope	4/1/2010	Chlorine 
+102	Pulaski	7/1/2002	Coliform (TCR)
+23	Putnam	4/1/2005	Combined Radium (-226 & -228)
+89	Randolph	7/1/2010	Total Haloacetic Acids (HAA5) 
+77	Richland	10/1/2007	CARBON
+15	Rock Island	8/1/2007	Coliform (TCR)
+94	Saline	4/1/2013	Chlorine 
+52	Sangamon	7/1/2005	Coliform (TCR)
+45	Schuyler	11/1/2007	Coliform (TCR)
+59	Scott	1/1/2004	Nitrate
+61	Shelby	7/1/2013	Arsenic
+80	St. Clair	8/1/2003	Coliform (TCR)
+25	Stark	5/1/2012	Coliform (TCR)
+2	Stephenson	7/1/2010	Chlorine 
+36	Tazewell	9/1/2002	Coliform (TCR)
+99	Union	11/1/2010	Coliform (TCR)
+40	Vermilion	11/1/2006	Coliform (TCR)
+83	Wabash	8/1/2013	Coliform (TCR)
+30	Warren	7/1/2005	Combined Radium (-226 & -228)
+85	Washington	2/1/2002	Coliform (TCR)
+81	Wayne	4/1/2010	Chloramine 
+87	White	4/1/2004	Chlorine 
+13	Whiteside	7/1/2004	1,2-Dichloroethane
+16	Will	10/1/2007	Combined Radium (-226 & -228)
+95	Williamson	8/1/2013	Coliform (TCR)
+3	Winnebago	1/1/2012	Combined Radium (-226 & -228)
+34	Woodford	7/1/2005	Chlorine 
