@@ -10,13 +10,13 @@ id	name	date	contaminants
 49	Cass	9/1/2003	Coliform (TCR)
 42	Champaign	1/1/2008	Chlorine
 57	Christian	7/1/2009	Chlorine
-65	Clark	1/1/2010	Chlorine & Coliform (TCR)
+65	Clark	1/1/2010	Chlorine,Coliform (TCR)
 75	Clay	11/1/2005	Coliform (TCR)
 79	Clinton	7/1/2008	Chlorine
 60	Coles	11/1/2012	Coliform (TCR)
-9	Cook	1/1/2012	Combined Radium (-226 & -228) & Coliform (TCR) & TTHM
+9	Cook	1/1/2012	Combined Radium (-226 & -228),Coliform (TCR),TTHM
 71	Crawford	7/1/2009	Coliform (TCR)
-67	Cumberland	10/1/2007	Chlorine & Coliform (TCR)
+67	Cumberland	10/1/2007	Chlorine,Coliform (TCR)
 44	De Witt	9/1/2011	Coliform (TCR)
 10	Dekalb	9/1/2013	Coliform (TCR)
 54	Douglas	7/1/2005	TTHM
@@ -41,7 +41,7 @@ id	name	date	contaminants
 72	Jasper	10/1/2006	Chlorine 
 86	Jefferson	5/1/2008	Coliform (TCR)
 68	Jersey	5/1/2011	Coliform (TCR)
-1	Jo Daviess	10/1/2002	Methoxychlor & Toxaphene & Dalapon
+1	Jo Daviess	10/1/2002	Methoxychlor,Toxaphene,Dalapon
 98	Johnson	12/1/2004	Chlorite
 11	Kane	11/1/2012	Coliform (TCR)
 24	Kankakee	2/1/2006	Coliform (TCR)
@@ -59,7 +59,7 @@ id	name	date	contaminants
 78	Marion	1/1/2005	Nitrite 
 27	Marshal	4/1/2005	Combined Radium (-226 & -228)
 41	Mason	7/1/2013	Chlorine 
-100	Massac	10/1/2002	1,2,4-Trichlorobenzene
+100	Massac	10/1/2002	1 2 4-Trichlorobenzene
 39	McDonough	10/1/2007	TTHM
 4	McHenry	8/1/2006	Coliform (TCR)
 35	McLean	1/1/2013	Chlorine
@@ -96,7 +96,7 @@ id	name	date	contaminants
 85	Washington	2/1/2002	Coliform (TCR)
 81	Wayne	4/1/2010	Chloramine 
 87	White	4/1/2004	Chlorine 
-13	Whiteside	7/1/2004	1,2-Dichloroethane
+13	Whiteside	7/1/2004	1 2-Dichloroethane
 16	Will	10/1/2007	Combined Radium (-226 & -228)
 95	Williamson	8/1/2013	Coliform (TCR)
 3	Winnebago	1/1/2012	Combined Radium (-226 & -228)
