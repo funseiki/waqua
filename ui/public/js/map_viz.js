@@ -2,7 +2,7 @@ var width = 600,
     height = 400;
 
 // map id's to numbers
-var rateById = d3.map();
+var countyMapping = d3.map();
 
 // round values to a set value in the range
 var quantize = d3.scale.quantize()
@@ -36,7 +36,14 @@ var county_click = function( thing) {
 queue()
     // load the .json and .tsv
     .defer(d3.json, "data/illinois.json")
-    .defer(d3.tsv, "data/counties.tsv", function(d) { rateById.set(d.id, +d.rate); })
+    .defer(d3.tsv, "data/counties.tsv", function(d) {
+        /*var contaminants = d.contaminants.split(",");
+        countyMapping.set(d.id, {
+            name: d.name,
+            date: d.date,
+            contaminants: contaminants
+        });*/
+    })
     // After they are loaded, call ready() and give each .json
     .await(ready);
 
@@ -54,7 +61,7 @@ function ready(error, us) {
         .enter().append("path")
 
         .attr("class", function(d) {
-            return quantize(rateById.get(d.id)) + " county"; })
+            return quantize(countyMapping.get(d.id)) + " county"; })
         .attr("id", function(d) { return "countyId-"+ d.id})
         .on("click", county_click)
         .attr("d", path);
