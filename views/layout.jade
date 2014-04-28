@@ -8,6 +8,7 @@ html
         //
             Bootstrap Includes
         link(href='/css/bootstrap.min.css', rel='stylesheet', media='screen')
+        link(href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css",rel="stylesheet")
         link(href='/css/index.css', rel='stylesheet')
 
         //
@@ -19,9 +20,14 @@ html
     .navbar.navbar-fixed-top
         .container
             .row
-                a.col-xs-offset-1.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/about') About
-                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/action') Action
-                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/') Home
-                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/search') Search
-                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/contaminants') Contaminants
+                a.col-xs-offset-1.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/about')
+                    span.glyphicon.glyphicon-question-sign
+                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/action')
+                    span.glyphicon.glyphicon-bullhorn
+                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/')
+                    span.glyphicon.glyphicon-home
+                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/search')
+                    span.glyphicon.glyphicon-search
+                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/contaminants')
+                    span.glyphicon.glyphicon-warning-sign
     block content
