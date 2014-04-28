@@ -22,7 +22,7 @@ id	name	date	contaminants
 54	Douglas	7/1/2005	TTHM
 12	Dupage	1/1/2009	Combined Radium (-226 & -228)
 53	Edgar	8/1/2011	Coliform (TCR)
-82	Edwards	1/1/2010	Chlorine 
+82	Edwards	1/1/2010	Chlorine
 70	Effingham	11/1/2006	Coliform (TCR)
 69	Faytte	6/1/2009	Coliform (TCR)
 32	Ford	7/1/2008	Chlorine
@@ -32,13 +32,13 @@ id	name	date	contaminants
 64	Greene	9/1/2012	Coliform (TCR)
 21	Grundy	1/1/2008	Endrin
 88	Hamilton	11/1/2005	Coliform (TCR)
-38	Hancock	1/1/2011	Total Haloacetic Acids (HAA5) 
+38	Hancock	1/1/2011	Total Haloacetic Acids (HAA5)
 96	Hardin	5/1/2010	Coliform (TCR)
 29	Henderson	7/1/2007	TTHM
 20	Henry	9/1/2010	Coliform (TCR)
 31	Iroquois	9/1/2010	Coliform (TCR)
-92	Jackson	1/1/2010	Chlorite 
-72	Jasper	10/1/2006	Chlorine 
+92	Jackson	1/1/2010	Chlorite
+72	Jasper	10/1/2006	Chlorine
 86	Jefferson	5/1/2008	Coliform (TCR)
 68	Jersey	5/1/2011	Coliform (TCR)
 1	Jo Daviess	10/1/2002	Methoxychlor,Toxaphene,Dalapon
@@ -52,13 +52,13 @@ id	name	date	contaminants
 76	Lawrence	4/1/2005	Nitrate
 14	Lee	7/1/2009	Arsenic
 28	Livingston	2/1/2004	Coliform (TCR)
-43	Logan	1/1/2007	Chlorine 
+43	Logan	1/1/2007	Chlorine
 51	Macon	4/1/2002	Nitrate
 63	Macoupin	9/1/2002	Coliform (TCR)
 74	Madison	1/1/2007	Coliform (TCR)
 78	Marion	1/1/2005	Nitrite 
 27	Marshal	4/1/2005	Combined Radium (-226 & -228)
-41	Mason	7/1/2013	Chlorine 
+41	Mason	7/1/2013	Chlorine
 100	Massac	10/1/2002	1 2 4-Trichlorobenzene
 39	McDonough	10/1/2007	TTHM
 4	McHenry	8/1/2006	Coliform (TCR)
@@ -66,38 +66,38 @@ id	name	date	contaminants
 48	Menard	8/1/2011	Coliform (TCR)
 22	Mercer	7/1/2006	Chlorine
 84	Monroe	10/1/2004	Total Haloacetic Acids (HAA5)
-62	Montgomery	1/1/2010	Total Haloacetic Acids (HAA5) 
+62	Montgomery	1/1/2010	Total Haloacetic Acids (HAA5)
 55	Morgan	5/1/2011	Coliform (TCR)
 58	Moultrie	10/1/2007	Coliform (TCR)
 7	Ogle	4/1/2007	Combined Radium (-226 & -228)
 33	Peoria	10/1/2005	Coliform (TCR)
 90	Perry	1/1/2012	Combined Radium (-226 & -228)
-46	Piatt	7/1/2007	Chlorine 
+46	Piatt	7/1/2007	Chlorine
 56	Pike	8/1/2012	Coliform (TCR)
-97	Pope	4/1/2010	Chlorine 
+97	Pope	4/1/2010	Chlorine
 102	Pulaski	7/1/2002	Coliform (TCR)
 23	Putnam	4/1/2005	Combined Radium (-226 & -228)
-89	Randolph	7/1/2010	Total Haloacetic Acids (HAA5) 
+89	Randolph	7/1/2010	Total Haloacetic Acids (HAA5)
 77	Richland	10/1/2007	CARBON
 15	Rock Island	8/1/2007	Coliform (TCR)
-94	Saline	4/1/2013	Chlorine 
+94	Saline	4/1/2013	Chlorine
 52	Sangamon	7/1/2005	Coliform (TCR)
 45	Schuyler	11/1/2007	Coliform (TCR)
 59	Scott	1/1/2004	Nitrate
 61	Shelby	7/1/2013	Arsenic
 80	St. Clair	8/1/2003	Coliform (TCR)
 25	Stark	5/1/2012	Coliform (TCR)
-2	Stephenson	7/1/2010	Chlorine 
+2	Stephenson	7/1/2010	Chlorine
 36	Tazewell	9/1/2002	Coliform (TCR)
 99	Union	11/1/2010	Coliform (TCR)
 40	Vermilion	11/1/2006	Coliform (TCR)
 83	Wabash	8/1/2013	Coliform (TCR)
 30	Warren	7/1/2005	Combined Radium (-226 & -228)
 85	Washington	2/1/2002	Coliform (TCR)
-81	Wayne	4/1/2010	Chloramine 
-87	White	4/1/2004	Chlorine 
+81	Wayne	4/1/2010	Chloramine
+87	White	4/1/2004	Chlorine
 13	Whiteside	7/1/2004	1 2-Dichloroethane
 16	Will	10/1/2007	Combined Radium (-226 & -228)
 95	Williamson	8/1/2013	Coliform (TCR)
 3	Winnebago	1/1/2012	Combined Radium (-226 & -228)
-34	Woodford	7/1/2005	Chlorine 
+34	Woodford	7/1/2005	Chlorine
