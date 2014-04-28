@@ -9,7 +9,7 @@ app.engine('jade', require('jade').__express);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-['about', 'search', 'contaminants', 'action'].forEach(function(route) {
+['about', 'search', 'contaminants', 'action', 'home'].forEach(function(route) {
     app.get('/' + route, function(req, res) {
         //res.sendfile('ui/public/' + route + '.html')
         res.render(route);
@@ -17,7 +17,7 @@ app.set('view engine', 'jade');
 });
 
 app.get('/', function(req, res) {
-    res.render('about');
+    res.render('home');
 });
 
 app.use(express.static(path.join(__dirname, 'ui/public')));
