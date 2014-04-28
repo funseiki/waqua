@@ -17,7 +17,7 @@
 }
 
 .words {
-    color: #3399FF;
+    color: #000;
 }
 
 .words-selected {
@@ -26,6 +26,24 @@
 
 .textbox {
     background-color: #3399FF;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.title2 {
+    font-size: 30px;
+    color: #E60000;
+}
+
+.emphasis-large {
+    color: red;
+    font-size: 28px;
+}
+
+.emphasis-small{
+    color: red;
 }
 
 img.wide {
@@ -39,6 +57,11 @@ img.tall {
     max-height: 100%;
     width: auto;
 }
+
+.spacer {
+    height: 30px;
+}
+
 /*******************/
 
 html {
