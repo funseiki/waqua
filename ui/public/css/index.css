@@ -1,6 +1,7 @@
 /** Theme Classes **/
-.tabs {
+.tab {
     background-color: #3366CC;
+    border-radius: 0px;
 }
 
 .backdrop {
@@ -48,10 +49,6 @@ body {
 
 .fill {
     min-height: 50%;
-}
-
-.btn-nav{
-    border-radius: 0px;
 }
 
 .navs {

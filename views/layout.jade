@@ -19,14 +19,14 @@ html
     .navbar.navbar-fixed-top
         .container
             .row
-                a.col-xs-offset-1.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/about')
-                    span.glyphicon.glyphicon-question-sign
-                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/action')
-                    span.glyphicon.glyphicon-bullhorn
-                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/')
-                    span.glyphicon.glyphicon-home
-                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/search')
-                    span.glyphicon.glyphicon-search
-                a.col-xs-2.text-center.btn.btn-primary.btn-nav(href='/contaminants')
-                    span.glyphicon.glyphicon-fire
+                a.col-xs-offset-1.col-xs-2.text-center.btn.tab(href='/about')
+                    span.glyphicon.glyphicon-question-sign.tabWords
+                a.col-xs-2.text-center.btn.btn-primary.tab(href='/action')
+                    span.glyphicon.glyphicon-bullhorn.tabWords
+                a.col-xs-2.text-center.btn.btn-primary.tab(href='/')
+                    span.glyphicon.glyphicon-home.tabWords
+                a.col-xs-2.text-center.btn.btn-primary.tab(href='/search')
+                    span.glyphicon.glyphicon-search.tabWords
+                a.col-xs-2.text-center.btn.btn-primary.tab(href='/contaminants')
+                    span.glyphicon.glyphicon-fire.tabWords
     block content
