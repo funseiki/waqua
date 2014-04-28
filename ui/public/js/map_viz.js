@@ -4,11 +4,6 @@ var width = 600,
 // map id's to numbers
 var countyMapping = d3.map();
 
-// round values to a set value in the range
-var quantize = d3.scale.quantize()
-    .domain([0, .15])
-    .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
-
 // Loads the albers projection to project map
 var projection = d3.geo.albersUsa()
     // Bigger > zooms in
@@ -32,23 +27,58 @@ var county_click = function( thing) {
     //event.
 }
 
+var classMap = {
+
+};
+
+var classCSS = "";
+
 // initialize a queue of files to load before using files
 queue()
     // load the .json and .tsv
     .defer(d3.json, "data/illinois.json")
     .defer(d3.tsv, "data/counties.tsv", function(d) {
-        /*var contaminants = d.contaminants.split(",");
+        var contaminants = d.contaminants.split(",");
+
+        for(var i = 0; i < contaminants.length; i++) {
+            var key = contaminants[i];
+            if(!classMap[key]) {
+                classMap[key] = key.replace(/ /g, '');
+
+            }
+        }
         countyMapping.set(d.id, {
             name: d.name,
             date: d.date,
             contaminants: contaminants
-        });*/
+        });
     })
     // After they are loaded, call ready() and give each .json
     .await(ready);
 
+var colorsCSS = [
+    "#BF7130",
+    "#A64B00",
+    "#1D7373",
+    "#006363",
+    "#269926",
+    "#269926",
+    "#008500",
+    "#BF3030"
+];
+
 // function that lays out the map
 function ready(error, us) {
+    var count = 0;
+    for (var key in classMap) {
+        count = (count + 1) % colorsCSS.length;
+        var cssClass = classMap[key].split("(")[0];
+
+        classCSS += "\n" +
+            ".contaminant-" + cssClass + " {\n"+
+            + "    fill:" + colorsCSS[count] + "\n"
+            +"}";
+    }
     // g Groups svgs
     svg.append("g")
         .attr("transform", "rotate(3.78)")
@@ -61,7 +91,9 @@ function ready(error, us) {
         .enter().append("path")
 
         .attr("class", function(d) {
-            return quantize(countyMapping.get(d.id)) + " county"; })
+            return "county ";
+            //return quantize(countyMapping.get(d.id)) + " county";
+        })
         .attr("id", function(d) { return "countyId-"+ d.id})
         .on("click", county_click)
         .attr("d", path);
