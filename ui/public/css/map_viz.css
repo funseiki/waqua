@@ -23,3 +23,55 @@
 .q6-9 { fill:rgb(33,113,181); }
 .q7-9 { fill:rgb(8,81,156); }
 .q8-9 { fill:rgb(8,48,107); }
+
+.contaminant-Chloramine {
+    fill:#A64B00
+}
+.contaminant-Coliform {
+    fill:#1D7373
+}
+.contaminant-TTHM {
+    fill:#006363
+}
+.contaminant-Nitrate {
+    fill:#269926
+}
+.contaminant-Chlorine {
+    fill:#269926
+}
+.contaminant-CombinedRadium {
+    fill:#008500
+}
+.contaminant-Endrin {
+    fill:#BF3030
+}
+.contaminant-TotalHaloaceticAcids {
+    fill:#BF7130
+}
+.contaminant-Chlorite {
+    fill:#A64B00
+}
+.contaminant-Methoxychlor {
+    fill:#1D7373
+}
+.contaminant-Toxaphene {
+    fill:#006363
+}
+.contaminant-Dalapon {
+    fill:#269926
+}
+.contaminant-Arsenic {
+    fill:#269926
+}
+.contaminant-Nitrite {
+    fill:#008500
+}
+.contaminant-124-Trichlorobenzene {
+    fill:#BF3030
+}
+.contaminant-Carbon {
+    fill:#BF7130
+}
+.contaminant-12-Dichloroethane {
+    fill:#A64B00
+}
