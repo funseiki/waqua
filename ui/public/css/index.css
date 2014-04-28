@@ -28,6 +28,17 @@
     background-color: #3399FF;
 }
 
+img.wide {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+img.tall {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+}
 /*******************/
 
 html {

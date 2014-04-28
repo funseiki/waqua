@@ -15,7 +15,7 @@ html
         //if lt IE 9
             script(src='/js/libs/html5shiv.js')
 
-  body
+  body.backdrop
     .navbar.navbar-fixed-top
         .container
             .row
@@ -29,4 +29,7 @@ html
                     span.glyphicon.glyphicon-search.tabWords
                 a.col-xs-2.text-center.btn.btn-primary.tab(href='/contaminants')
                     span.glyphicon.glyphicon-fire.tabWords
+    script(type="text/javascript", src="/js/lib/jquery.min.js" )
+    script(type="text/javascript", src="/js/lib/bootstrap.min.js" )
+    script(type="text/javascript", src="/js/index.js" )
     block content
