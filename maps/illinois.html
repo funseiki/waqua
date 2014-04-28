@@ -2,118 +2,12 @@
 <html>
     <head>
       <meta charset="utf-8">
-        <style>
-
-            .counties {
-                fill: none;
-                stroke: #000;
-                stroke-linejoin: round;
-            }
-
-            .county:hover {
-                fill:#f66;
-
-            }
-
-            /*.states {
-              fill: none;
-              stroke: #000;
-              stroke-linejoin: round;
-            }*/
-
-            .q0-9 { fill:rgb(100,255,105); }
-            
-            .q1-9 { fill:rgb(122,135,147); }
-            .q2-9 { fill:rgb(198,219,239); }
-            .q3-9 { fill:rgb(158,202,225); }
-            .q4-9 { fill:rgb(107,174,214); }
-            .q5-9 { fill:rgb(66,146,198); }
-            .q6-9 { fill:rgb(33,113,181); }
-            .q7-9 { fill:rgb(8,81,156); }
-            .q8-9 { fill:rgb(8,48,107); }
-
-        </style>
+      <link href="/css/map_viz.css" rel="stylesheet">
     </head>
-
     <body>
-
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="http://d3js.org/queue.v1.min.js"></script>
         <script src="http://d3js.org/topojson.v1.min.js"></script>
-
-        <script>
-
-            var width = 600,
-                height = 400;
-
-            // map id's to numbers
-            var rateById = d3.map();
-
-            // round values to a set value in the range
-            var quantize = d3.scale.quantize()
-                .domain([0, .15])
-                .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
-
-            // Loads the albers projection to project map
-            var projection = d3.geo.albersUsa()
-                // Bigger > zooms in
-                //.center([-90.9119886116482,40.19316792190344])
-                .scale(3520)
-                .translate([0, height / 1.5]);
-
-            // Creates a path data string sutable for "d" in svg's
-            var path = d3.geo.path()
-                .projection(projection);
-
-            // Make a new svg
-            var svg = d3.select("body").append("svg")
-                .attr("width", width)
-                .attr("height", height);
-
-            var county_click = function( thing) {
-                console.log(thing);
-                console.log(thing.id);
-                console.log(d3.select("#countyID-"+thing.id));
-                //event.
-            }
-
-            // initialize a queue of files to load before using files
-            queue()
-                // load the .json and .tsv
-                .defer(d3.json, "illinois.json")
-                .defer(d3.tsv, "counties.tsv", function(d) { rateById.set(d.id, +d.rate); })
-                // After they are loaded, call ready() and give each .json
-                .await(ready);
-
-            // function that lays out the map
-            function ready(error, us) {
-                // g Groups svgs
-                svg.append("g")
-                    // the group class is counties
-                    .attr("class", "counties")
-                // all of the path uses the us.json counties data
-                .selectAll("path")
-                    .data(topojson.feature(us, us.objects.illinois2).features)
-                // sets each path data to each color class
-                .enter().append("path")
-
-                    .attr("class", function(d) { 
-                        console.log("poop");
-                        return quantize(rateById.get(d.id)) + " county"; })
-                    .attr("id", function(d) { return "countyId-"+ d.id})
-                    .on("click", county_click)
-                    .attr("d", path);
-            }
-            
-            // Click on county brings up stuff
-
-
-
-            d3.select(self.frameElement).style("height", height + "px");
-
-        </script>
-
-        
-
+        <script src="/js/map_viz.js"></script>
     </body>
 </html>

@@ -9,6 +9,7 @@ html
             Bootstrap Includes
         link(href='/css/lib/bootstrap.min.css', rel='stylesheet', media='screen')
         link(href='/css/index.css', rel='stylesheet')
+        link(href='/css/map_viz.css', rel='stylesheet')
 
         //
             HTML5 shim, for IE6-8 support of HTML5 elements
@@ -29,7 +30,8 @@ html
                     span.glyphicon.glyphicon-search.tabWords
                 a.col-xs-2.text-center.btn.btn-primary.tab(href='/contaminants')
                     span.glyphicon.glyphicon-fire.tabWords
-    script(type="text/javascript", src="/js/lib/jquery.min.js" )
-    script(type="text/javascript", src="/js/lib/bootstrap.min.js" )
-    script(type="text/javascript", src="/js/index.js" )
     block content
+    block scripts
+        script(type="text/javascript", src="/js/lib/jquery.min.js" )
+        script(type="text/javascript", src="/js/lib/bootstrap.min.js" )
+        script(type="text/javascript", src="/js/index.js" )
