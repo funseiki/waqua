@@ -44,13 +44,14 @@ queue()
 function ready(error, us) {
     // g Groups svgs
     svg.append("g")
+        .attr("transform", "rotate(3.78)")
         // the group class is counties
         .attr("class", "counties")
-    // all of the path uses the us.json counties data
-    .selectAll("path")
-        .data(topojson.feature(us, us.objects.illinois2).features)
-    // sets each path data to each color class
-    .enter().append("path")
+        // all of the path uses the us.json counties data
+        .selectAll("path")
+            .data(topojson.feature(us, us.objects.illinois2).features)
+        // sets each path data to each color class
+        .enter().append("path")
 
         .attr("class", function(d) {
             return quantize(rateById.get(d.id)) + " county"; })
