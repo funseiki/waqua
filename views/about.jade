@@ -2,18 +2,25 @@ extends layout
 block content
     .container.fill
         .row.description
-            .col-xs-12
-                p="Waqua is..."
-        .row.middle-content
-            .col-xs-4.resources
-                p="Resources"
-                ul
-                    li.resource="EPA"
-                    li.resource="SDWIS"
-                    li.resource="etc"
+            .col-xs-12.words
+                span.emphasis-waqua="Waqua"
+                span=" aggregates data about your drinkiing water from a variety of sources, giving you up to date inforation on recent and ongoing incidents. Our goal is to educate the public, to raise awareness about water quality issues in the U.S., and to pave the way for truly universal clean water."
 
-            .col-xs-offset-2.col-xs-6.state-image
-                img(url="", height="100px", width="100px")
+        .row.middle-content
+            .col-xs-6.words.resources
+                p="Our Sources"
+                .row.resource
+                    .col-xs-6
+                        a(href="")
+                            .p="EPA"
+                            img(src="/img/about/epa.png",width="100px", height="100px")
+                    .col-xs-6
+                        a(href="")
+                            p="National Geographic"
+                            img(src="/img/about/natgeo.png",width="100px", height="100px")
+
+            .col-xs-6.state-image.text-center
+                img(src="", height="200px", width="100px")
 
     .container.fill
         .row.our-team

@@ -46,6 +46,19 @@
     font-size: 28px;
 }
 
+.emphasis-waqua {
+    color: rgb(13,177,215);
+    font-size: 28px;
+}
+
+.resource {
+    font-size: 22px;
+}
+
+.resources {
+    font-size: 24px;
+}
+
 .emphasis-small{
     color: red;
 }
