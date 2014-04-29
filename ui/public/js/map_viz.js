@@ -25,11 +25,8 @@ var svg = d3.select("svg")
     .attr("width", width)
     .attr("height", height);
 
-var county_click = function( thing) {
-    console.log(thing);
-    console.log(thing.id);
-    console.log(d3.select("#countyID-"+thing.id));
-    //event.
+var county_click = function(county) {
+    console.log(d3.select("#countyID-"+county.id));
 }
 
 // initialize a queue of files to load before using files
@@ -38,7 +35,6 @@ queue()
     .defer(d3.json, "data/illinois.json")
     .defer(d3.tsv, "data/counties.tsv", function(d) {
         var contaminants = d.contaminants.split(",");
-
         countyMapping.set(d.id, {
             name: d.name,
             date: d.date,
@@ -47,6 +43,30 @@ queue()
     })
     // After they are loaded, call ready() and give each .json
     .await(ready);
+
+var substringMatcher = function(strs) {
+    return function findMatches(q, cb) {
+        var matches, substringRegex;
+
+        // an array that will be populated with substring matches
+        matches = [];
+
+        // regex used to determine if a string contains the substring `q`
+        substrRegex = new RegExp(q, 'i');
+
+        // iterate through the pool of strings and for any string that
+        // contains the substring `q`, add it to the `matches` array
+        $.each(strs, function(i, str) {
+            if (substrRegex.test(str)) {
+                // the typeahead jQuery plugin expects suggestions to a
+                // JavaScript object, refer to typeahead docs for more info
+                matches.push({ value: str });
+            }
+        });
+
+        cb(matches);
+    };
+};
 
 // function that lays out the map
 function ready(error, us) {
@@ -68,7 +88,19 @@ function ready(error, us) {
         .attr("id", function(d) { return "countyId-"+ d.id})
         .on("click", county_click)
         .attr("d", path);
-}
-// Click on county brings up stuff
 
+    $('#county_select .typeahead').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+    },
+    {
+        name: 'countyList',
+        displayKey: 'value',
+        source: substringMatcher($.map(countyMapping, function(county) {return county.name}))
+    });
+}
+
+// Click on county brings up stuff
 d3.select(self.frameElement).style("height", height + "px");
+

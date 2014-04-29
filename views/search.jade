@@ -4,11 +4,15 @@ append css
 block content
     .container
         .row
-            .col-xs-12.text-center
+            .col-xs-6
+                div#county_select
+                    input.typeahead(type="text", placeholder="Enter a county")
+            .col-xs-6.text-center
                 svg
 
-block scripts
+append scripts
     script(type="text/javascript", src="/js/lib/d3.v3.min.js")
     script(type="text/javascript", src="/js/lib/queue.v1.min.js")
     script(type="text/javascript", src="/js/lib/topojson.v1.min.js")
+    script(type="text/javascript", src="/js/lib/typeahead.bundle.js")
     script(type="text/javascript", src="/js/map_viz.js" )
