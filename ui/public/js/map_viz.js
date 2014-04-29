@@ -1,4 +1,4 @@
-var width = 600,
+var width = 400,
     height = 400;
 
 var classFromContaminant = function(contaminant) {
@@ -8,13 +8,20 @@ var classFromContaminant = function(contaminant) {
 
 // map id's to numbers
 var countyMapping = d3.map();
+var countyNameToId = {
+
+};
+
+var allContaminants = {
+
+};
 
 // Loads the albers projection to project map
 var projection = d3.geo.albersUsa()
     // Bigger > zooms in
     //.center([-90.9119886116482,40.19316792190344])
     .scale(3520)
-    .translate([0, height / 1.5]);
+    .translate([-width/2, height / 1.5]);
 
 // Creates a path data string sutable for "d" in svg's
 var path = d3.geo.path()
@@ -35,6 +42,13 @@ queue()
     .defer(d3.json, "data/illinois.json")
     .defer(d3.tsv, "data/counties.tsv", function(d) {
         var contaminants = d.contaminants.split(",");
+        countyNameToId[d.name] = d.id;
+        for(var i = 0; i < contaminants.length; i++) {
+            if(!allContaminants[contaminants[i]]) {
+                allContaminants[contaminants[i]] = [];
+            }
+            allContaminants[contaminants[i]].push(d.id);
+        }
         countyMapping.set(d.id, {
             name: d.name,
             date: d.date,
@@ -56,7 +70,8 @@ var substringMatcher = function(strs) {
 
         // iterate through the pool of strings and for any string that
         // contains the substring `q`, add it to the `matches` array
-        $.each(strs, function(i, str) {
+        $.each(strs, function(i, obj) {
+            var str = obj.value;
             if (substrRegex.test(str)) {
                 // the typeahead jQuery plugin expects suggestions to a
                 // JavaScript object, refer to typeahead docs for more info
@@ -92,15 +107,41 @@ function ready(error, us) {
     $('#county_select .typeahead').typeahead({
         hint: true,
         highlight: true,
-        minLength: 1
+        minLength: 0
     },
     {
         name: 'countyList',
         displayKey: 'value',
-        source: substringMatcher($.map(countyMapping, function(county) {return county.name}))
+        source: substringMatcher($.map(countyMapping, function(county) {return {id: county.id, value: county.name}}))
+    });
+    $('#county_select').bind('typeahead:selected', function(obj, datum, name) {
+        var county = countyMapping.get(countyNameToId[datum.value]);
+        $("#county-info-name").html(county.name);
+        $("#county-violation-date").html(county.date);
+        $("#county-contaminants").html(county.contaminants.toString());
+    });
+
+    for(var index in allContaminants) {
+        $(".dropdown-menu").append('<li><a>'+ index +'</a></li>');
+    }
+
+    $( document.body ).on( 'click', '.dropdown-menu li', function( event ) {
+        var $target = $( event.currentTarget );
+        var contaminant = $target.find('a').html();
+        var group = $target.closest( '.btn-group' );
+        group.find('.selection_text').html(contaminant);
+        if(contaminant == "All Contaminants") {
+            d3.selectAll('.county').classed('noContaminant', false);
+        }
+        else {
+            d3.selectAll('.county').classed('noContaminant', true);
+            for(var i = 0; i < allContaminants[contaminant].length; i++) {
+                var id = allContaminants[contaminant][i];
+                d3.select('#countyId-' + id).classed('noContaminant', false);
+            }
+        }
     });
 }
 
 // Click on county brings up stuff
 d3.select(self.frameElement).style("height", height + "px");
-

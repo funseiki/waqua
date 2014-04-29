@@ -6,10 +6,35 @@ block content
     .container
         .row
             .col-xs-6
-                div#county_select
-                    input.typeahead(type="text", placeholder="Enter a county")
+                .row
+                    .col-xs-12#county_select
+                        input.typeahead(type="text", placeholder="Enter a county")
+                .row.spacer
+                .row
+                    .col-xs-12
+                        div
+                            p.countyInfo County
+                            p#county-info-name
+                        div
+                            p.countyInfo Last Violation Recorded
+                            p#county-violation-date
+                        div
+                            p.countyInfo Contaminants Found
+                            p#county-contaminants
+
             .col-xs-6.text-center
-                svg
+                .row
+                    .col-xs-12.text-center
+                        .btn-group.btn-input.clearfix
+                            .button(type="button", class="btn btn-default dropdown-toggle form-control",data-toggle="dropdown")
+                                span.selection_text(data-bind("label")) Select a contaminant
+                                span.caret
+                            ul(class="dropdown-menu", role="menu")
+                                li
+                                    a All Contaminants
+                .row
+                    .col-xs-12
+                        svg
 
 append scripts
     script(type="text/javascript", src="/js/lib/d3.v3.min.js")
