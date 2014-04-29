@@ -6,7 +6,7 @@ id	name	date	contaminants
 50	Brown	6/1/2005	Coliform (TCR)
 19	Bureau	10/1/2004	Coliform (TCR)
 66	Calhoun	4/1/2008	Chlorine
-8	Carroll	4/1/2005	Combined Radium (-226 & -228)
+8	Carroll	4/1/2005	Combined Radium (-226 and -228)
 49	Cass	9/1/2003	Coliform (TCR)
 42	Champaign	1/1/2008	Chlorine
 57	Christian	7/1/2009	Chlorine
@@ -14,13 +14,13 @@ id	name	date	contaminants
 75	Clay	11/1/2005	Coliform (TCR)
 79	Clinton	7/1/2008	Chlorine
 60	Coles	11/1/2012	Coliform (TCR)
-9	Cook	1/1/2012	Combined Radium (-226 & -228),Coliform (TCR),TTHM
+9	Cook	1/1/2012	Combined Radium (-226 and -228),Coliform (TCR),TTHM
 71	Crawford	7/1/2009	Coliform (TCR)
 67	Cumberland	10/1/2007	Chlorine,Coliform (TCR)
 44	De Witt	9/1/2011	Coliform (TCR)
 10	Dekalb	9/1/2013	Coliform (TCR)
 54	Douglas	7/1/2005	TTHM
-12	Dupage	1/1/2009	Combined Radium (-226 & -228)
+12	Dupage	1/1/2009	Combined Radium (-226 and -228)
 53	Edgar	8/1/2011	Coliform (TCR)
 82	Edwards	1/1/2010	Chlorine
 70	Effingham	11/1/2006	Coliform (TCR)
@@ -45,7 +45,7 @@ id	name	date	contaminants
 98	Johnson	12/1/2004	Chlorite
 11	Kane	11/1/2012	Coliform (TCR)
 24	Kankakee	2/1/2006	Coliform (TCR)
-17	Kendall	10/1/2006	Combined Radium (-226 & -228)
+17	Kendall	10/1/2006	Combined Radium (-226 and -228)
 26	Knox	8/1/2007	Coliform (TCR)
 18	La Salle	8/1/2013	Coliform (TCR)
 6	Lake	5/1/2007	Coliform (TCR)
@@ -57,7 +57,7 @@ id	name	date	contaminants
 63	Macoupin	9/1/2002	Coliform (TCR)
 74	Madison	1/1/2007	Coliform (TCR)
 78	Marion	1/1/2005	Nitrite
-27	Marshal	4/1/2005	Combined Radium (-226 & -228)
+27	Marshal	4/1/2005	Combined Radium (-226 and -228)
 41	Mason	7/1/2013	Chlorine
 100	Massac	10/1/2002	1 2 4-Trichlorobenzene
 39	McDonough	10/1/2007	TTHM
@@ -69,14 +69,14 @@ id	name	date	contaminants
 62	Montgomery	1/1/2010	Total Haloacetic Acids (HAA5)
 55	Morgan	5/1/2011	Coliform (TCR)
 58	Moultrie	10/1/2007	Coliform (TCR)
-7	Ogle	4/1/2007	Combined Radium (-226 & -228)
+7	Ogle	4/1/2007	Combined Radium (-226 and -228)
 33	Peoria	10/1/2005	Coliform (TCR)
-90	Perry	1/1/2012	Combined Radium (-226 & -228)
+90	Perry	1/1/2012	Combined Radium (-226 and -228)
 46	Piatt	7/1/2007	Chlorine
 56	Pike	8/1/2012	Coliform (TCR)
 97	Pope	4/1/2010	Chlorine
 102	Pulaski	7/1/2002	Coliform (TCR)
-23	Putnam	4/1/2005	Combined Radium (-226 & -228)
+23	Putnam	4/1/2005	Combined Radium (-226 and -228)
 89	Randolph	7/1/2010	Total Haloacetic Acids (HAA5)
 77	Richland	10/1/2007	Carbon
 15	Rock Island	8/1/2007	Coliform (TCR)
@@ -92,12 +92,12 @@ id	name	date	contaminants
 99	Union	11/1/2010	Coliform (TCR)
 40	Vermilion	11/1/2006	Coliform (TCR)
 83	Wabash	8/1/2013	Coliform (TCR)
-30	Warren	7/1/2005	Combined Radium (-226 & -228)
+30	Warren	7/1/2005	Combined Radium (-226 and -228)
 85	Washington	2/1/2002	Coliform (TCR)
 81	Wayne	4/1/2010	Chloramine
 87	White	4/1/2004	Chlorine
 13	Whiteside	7/1/2004	1 2-Dichloroethane
-16	Will	10/1/2007	Combined Radium (-226 & -228)
+16	Will	10/1/2007	Combined Radium (-226 and -228)
 95	Williamson	8/1/2013	Coliform (TCR)
-3	Winnebago	1/1/2012	Combined Radium (-226 & -228)
+3	Winnebago	1/1/2012	Combined Radium (-226 and -228)
 34	Woodford	7/1/2005	Chlorine
