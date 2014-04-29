@@ -1,6 +1,11 @@
 var width = 600,
     height = 400;
 
+var classFromContaminant = function(contaminant) {
+    var noSpace = contaminant.replace(/ /g, '');
+    return "contaminant-" + noSpace.split("(")[0];
+}
+
 // map id's to numbers
 var countyMapping = d3.map();
 
@@ -27,12 +32,6 @@ var county_click = function( thing) {
     //event.
 }
 
-var classMap = {
-
-};
-
-var classCSS = "";
-
 // initialize a queue of files to load before using files
 queue()
     // load the .json and .tsv
@@ -40,13 +39,6 @@ queue()
     .defer(d3.tsv, "data/counties.tsv", function(d) {
         var contaminants = d.contaminants.split(",");
 
-        for(var i = 0; i < contaminants.length; i++) {
-            var key = contaminants[i];
-            if(!classMap[key]) {
-                classMap[key] = key.replace(/ /g, '');
-
-            }
-        }
         countyMapping.set(d.id, {
             name: d.name,
             date: d.date,
@@ -56,29 +48,8 @@ queue()
     // After they are loaded, call ready() and give each .json
     .await(ready);
 
-var colorsCSS = [
-    "#BF7130",
-    "#A64B00",
-    "#1D7373",
-    "#006363",
-    "#269926",
-    "#269926",
-    "#008500",
-    "#BF3030"
-];
-
 // function that lays out the map
 function ready(error, us) {
-    var count = 0;
-    for (var key in classMap) {
-        count = (count + 1) % colorsCSS.length;
-        var cssClass = classMap[key].split("(")[0];
-
-        classCSS += "\n" +
-            ".contaminant-" + cssClass + " {\n"+
-            + "    fill:" + colorsCSS[count] + "\n"
-            +"}";
-    }
     // g Groups svgs
     svg.append("g")
         .attr("transform", "rotate(3.78)")
@@ -91,8 +62,8 @@ function ready(error, us) {
         .enter().append("path")
 
         .attr("class", function(d) {
-            return "county ";
-            //return quantize(countyMapping.get(d.id)) + " county";
+            var county = countyMapping.get(d.id);
+            return "county "+ classFromContaminant(county.contaminants[0]);
         })
         .attr("id", function(d) { return "countyId-"+ d.id})
         .on("click", county_click)
